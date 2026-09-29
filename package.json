@@ -1,0 +1,15 @@
+{
+  "name": "pantrypal-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PantryPal AI - Smart Pantry & Food Waste Manager",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

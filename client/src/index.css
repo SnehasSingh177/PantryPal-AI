@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFF9EF;
+    color: #1E2E24;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    @apply antialiased font-sans min-h-screen selection:bg-[#F4D98A] selection:text-[#315C45] font-normal leading-relaxed;
+  }
+
+  h1 {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    @apply font-bold tracking-tight text-[#1E2E24];
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    @apply font-semibold tracking-tight text-[#1E2E24];
+  }
+
+  p {
+    @apply font-normal leading-relaxed text-[#343A35];
+  }
+}
+
+@layer components {
+  /* Bold, Playful, Chunky Buttons with Tactile Lift & Press Effect */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-white bg-[#315C45] border border-[#244634] shadow-[0_4px_0_#244634] hover:-translate-y-0.5 hover:bg-[#284c39] hover:shadow-[0_6px_0_#244634] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#315C45]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-[#315C45] bg-[#FFFDF9] border-2 border-[#EADDC7] shadow-[0_4px_0_#EADDC7] hover:-translate-y-0.5 hover:bg-[#FFF9EF] hover:border-[#315C45]/40 hover:shadow-[0_6px_0_#D8CBB5] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#315C45]/30 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-terracotta {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-white bg-[#D97B5B] border border-[#B55F43] shadow-[0_4px_0_#B55F43] hover:-translate-y-0.5 hover:bg-[#CF6C4B] hover:shadow-[0_6px_0_#B55F43] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#D97B5B]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-mint {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-[#315C45] bg-[#DCEBDD] border border-[#C2DEC5] shadow-[0_4px_0_#B5D0B8] hover:-translate-y-0.5 hover:bg-[#CEE3CF] hover:shadow-[0_6px_0_#B5D0B8] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#315C45]/30 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-sage {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-[#1E2E24] bg-[#A8BEA0] border border-[#8FA887] shadow-[0_4px_0_#8FA887] hover:-translate-y-0.5 hover:bg-[#97AE8F] hover:shadow-[0_6px_0_#8FA887] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#A8BEA0]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-peach {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-[#343A35] bg-[#F3C7AE] border border-[#DFA587] shadow-[0_4px_0_#DFA587] hover:-translate-y-0.5 hover:bg-[#EBB89E] hover:shadow-[0_6px_0_#DFA587] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#F3C7AE]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-butter {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-[#734A10] bg-[#F4D98A] border border-[#E2BC55] shadow-[0_4px_0_#D4AD42] hover:-translate-y-0.5 hover:bg-[#F8E09B] hover:shadow-[0_6px_0_#D4AD42] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#E2BC55]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-2xl font-semibold text-white bg-[#D9534F] border border-[#B53834] shadow-[0_4px_0_#B53834] hover:-translate-y-0.5 hover:bg-[#C9302C] hover:shadow-[0_6px_0_#B53834] active:translate-y-1 active:shadow-none transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#D9534F]/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none cursor-pointer select-none;
+  }
+
+  /* Kawaii Modern Organic & Pinterest Cards */
+  .card-pantry {
+    @apply bg-white/95 backdrop-blur-sm rounded-3xl border border-[#EADDC7] shadow-pinterest-card p-5 lg:p-6 transition-all duration-200 hover:border-[#A8BEA0] hover:shadow-pinterest-hover;
+  }
+
+  .card-kawaii {
+    @apply bg-white rounded-3xl border-2 border-[#EADDC7] shadow-pinterest-card p-5 lg:p-6 transition-all duration-200 hover:border-[#A8BEA0] hover:shadow-pinterest-hover;
+  }
+
+  .card-pinterest {
+    @apply bg-white/95 rounded-3xl border-2 border-[#EADDC7] shadow-pinterest-card p-5 lg:p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#A8BEA0] hover:shadow-pinterest-hover relative overflow-hidden;
+  }
+
+  /* Playful Pinterest Kawaii Card Border Variations */
+  .card-sage {
+    @apply bg-white rounded-3xl border-2 border-[#A8BEA0]/70 shadow-pinterest-card p-5 lg:p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#315C45] hover:shadow-pinterest-hover relative overflow-hidden;
+  }
+
+  .card-terracotta {
+    @apply bg-gradient-to-br from-[#FFFDF9] via-[#FFF9EF] to-[#F3C7AE]/20 rounded-3xl border-2 border-[#D97B5B]/80 shadow-pinterest-card p-5 lg:p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#D97B5B] hover:shadow-pinterest-hover relative overflow-hidden;
+  }
+
+  .card-dashed {
+    @apply bg-[#FFF9EF]/80 rounded-3xl border-2 border-dashed border-[#A8BEA0]/60 p-5 lg:p-6 transition-all relative overflow-hidden;
+  }
+
+  /* Cute Pinterest Washi Tape & Sticker Accents */
+  .washi-tape-peach {
+    @apply absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-[#F3C7AE]/70 backdrop-blur-sm rotate-[-2deg] rounded-sm shadow-sm pointer-events-none;
+  }
+
+  .washi-tape-sage {
+    @apply absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-[#A8BEA0]/70 backdrop-blur-sm rotate-[2deg] rounded-sm shadow-sm pointer-events-none;
+  }
+
+  .washi-tape-butter {
+    @apply absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-[#F4D98A]/70 backdrop-blur-sm rotate-[-1deg] rounded-sm shadow-sm pointer-events-none;
+  }
+
+  /* Status Badges */
+  .badge-fresh {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#DCEBDD] text-[#315C45] border border-[#C2DEC5];
+  }
+
+  .badge-expiring {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#F4D98A]/60 text-[#9C542E] border border-[#E2BC55]/60;
+  }
+
+  .badge-expired {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#FEE8E2] text-[#C05435] border border-[#F8C8BD];
+  }
+
+  .badge-sage {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#A8BEA0]/30 text-[#1E2E24] border border-[#A8BEA0]/60;
+  }
+
+  .badge-peach {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#F3C7AE]/40 text-[#9C542E] border border-[#F3C7AE];
+  }
+}
+
+/* Floating Kawaii Food Doodles Background System */
+.floating-doodle-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.floating-doodle {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.doodle-float-1 {
+  animation: doodleFloat1 18s ease-in-out infinite;
+}
+
+.doodle-float-2 {
+  animation: doodleFloat2 22s ease-in-out infinite;
+}
+
+.doodle-float-3 {
+  animation: doodleFloat3 25s ease-in-out infinite;
+}
+
+.doodle-float-4 {
+  animation: doodleFloat4 20s ease-in-out infinite;
+}
+
+.doodle-float-5 {
+  animation: doodleFloat5 24s ease-in-out infinite;
+}
+
+.doodle-float-6 {
+  animation: doodleFloat6 16s ease-in-out infinite;
+}
+
+.doodle-float-7 {
+  animation: doodleFloat7 28s ease-in-out infinite;
+}
+
+.doodle-float-8 {
+  animation: doodleFloat8 21s ease-in-out infinite;
+}
+
+.doodle-sparkle-pulse {
+  animation: doodleSparklePulse 4.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes doodleFloat1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(10px, -15px, 0) rotate(3deg);
+  }
+  50% {
+    transform: translate3d(-6px, -26px, 0) rotate(-2deg);
+  }
+  75% {
+    transform: translate3d(-12px, -12px, 0) rotate(2.5deg);
+  }
+}
+
+@keyframes doodleFloat2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(-12px, 14px, 0) rotate(-3.5deg);
+  }
+  50% {
+    transform: translate3d(8px, 24px, 0) rotate(2deg);
+  }
+  75% {
+    transform: translate3d(14px, 10px, 0) rotate(-1.5deg);
+  }
+}
+
+@keyframes doodleFloat3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translate3d(14px, -10px, 0) rotate(3.5deg);
+  }
+  60% {
+    transform: translate3d(6px, -24px, 0) rotate(-2deg);
+  }
+  85% {
+    transform: translate3d(-8px, -14px, 0) rotate(1deg);
+  }
+}
+
+@keyframes doodleFloat4 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(-15px, -18px, 0) rotate(-4deg);
+  }
+  55% {
+    transform: translate3d(-6px, -8px, 0) rotate(2deg);
+  }
+  80% {
+    transform: translate3d(8px, -20px, 0) rotate(-2deg);
+  }
+}
+
+@keyframes doodleFloat5 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translate3d(9px, 16px, 0) rotate(2.5deg);
+  }
+  60% {
+    transform: translate3d(-14px, 22px, 0) rotate(-3deg);
+  }
+  85% {
+    transform: translate3d(-6px, 8px, 0) rotate(1deg);
+  }
+}
+
+@keyframes doodleFloat6 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  35% {
+    transform: translate3d(-14px, -14px, 0) rotate(-3.5deg);
+  }
+  70% {
+    transform: translate3d(12px, -22px, 0) rotate(3deg);
+  }
+}
+
+@keyframes doodleFloat7 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(15px, -16px, 0) rotate(4deg);
+  }
+  50% {
+    transform: translate3d(-10px, -30px, 0) rotate(-2.5deg);
+  }
+  75% {
+    transform: translate3d(-16px, -12px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes doodleFloat8 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(-10px, 18px, 0) rotate(-3deg);
+  }
+  55% {
+    transform: translate3d(12px, 26px, 0) rotate(3.5deg);
+  }
+  80% {
+    transform: translate3d(16px, 10px, 0) rotate(-1.5deg);
+  }
+}
+
+@keyframes doodleSparklePulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.15) rotate(12deg);
+    opacity: 0.85;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-doodle,
+  .doodle-float-1,
+  .doodle-float-2,
+  .doodle-float-3,
+  .doodle-float-4,
+  .doodle-float-5,
+  .doodle-float-6,
+  .doodle-float-7,
+  .doodle-float-8,
+  .doodle-sparkle-pulse {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Cute Warm Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4DEC9;
+  border-radius: 9999px;
+  border: 2px solid #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9EC8A3;
+}
